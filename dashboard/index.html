@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WordPress Security Dashboard — AgenciAR</title>
+<style>
+:root {
+  --bg: #0f172a; --surface: #1e293b; --surface2: #334155;
+  --text: #f1f5f9; --text2: #94a3b8; --text3: #64748b;
+  --ok: #10b981; --warn: #f59e0b; --crit: #ef4444; --info: #3b82f6;
+  --border: #475569; --radius: 12px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; min-height:100vh; }
+.container { max-width:1200px; margin:0 auto; padding:24px 16px; }
+header { text-align:center; padding:40px 0 32px; }
+header h1 { font-size:28px; margin-bottom:8px; }
+header p { color:var(--text2); font-size:14px; }
+.stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:12px; margin-bottom:32px; }
+.stat-card { background:var(--surface); border-radius:var(--radius); padding:20px; text-align:center; border:1px solid var(--border); transition:transform .2s; }
+.stat-card:hover { transform:translateY(-2px); }
+.stat-value { font-size:36px; font-weight:700; }
+.stat-label { font-size:12px; color:var(--text2); margin-top:4px; text-transform:uppercase; letter-spacing:0.5px; }
+.section-title { font-size:20px; margin:32px 0 16px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+.timeline { display:flex; flex-direction:column; gap:8px; margin-bottom:32px; }
+.timeline-item { display:flex; align-items:center; gap:12px; background:var(--surface); border-radius:var(--radius); padding:14px 20px; cursor:pointer; border:1px solid var(--border); transition:all .2s; }
+.timeline-item:hover { background:var(--surface2); border-color:var(--info); }
+.timeline-item.active { border-color:var(--info); box-shadow:0 0 0 1px var(--info); }
+.timeline-date { font-weight:600; min-width:100px; }
+.timeline-badges { display:flex; gap:8px; flex-wrap:wrap; flex:1; }
+.badge { padding:3px 10px; border-radius:20px; font-size:11px; font-weight:600; }
+.badge-ok { background:rgba(16,185,129,.15); color:var(--ok); }
+.badge-warn { background:rgba(245,158,11,.15); color:var(--warn); }
+.badge-crit { background:rgba(239,68,68,.15); color:var(--crit); }
+.badge-fix { background:rgba(59,130,246,.15); color:var(--info); }
+.status-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+.status-ok { background:var(--ok); }
+.status-warn { background:var(--warn); }
+.status-crit { background:var(--crit); }
+.chart-container { background:var(--surface); border-radius:var(--radius); padding:24px; margin-bottom:32px; border:1px solid var(--border); overflow-x:auto; }
+.chart-canvas { width:100%; height:200px; display:flex; align-items:flex-end; gap:4px; padding-top:20px; }
+.chart-bar-group { display:flex; flex-direction:column; align-items:center; flex:1; min-width:40px; gap:2px; }
+.chart-bar { border-radius:4px 4px 0 0; min-height:2px; width:100%; max-width:30px; transition:height .3s; cursor:pointer; position:relative; }
+.chart-bar:hover::after { content:attr(data-tooltip); position:absolute; bottom:100%; left:50%; transform:translateX(-50%); background:#000; color:#fff; padding:4px 8px; border-radius:4px; font-size:11px; white-space:nowrap; margin-bottom:4px; }
+.chart-label { font-size:10px; color:var(--text3); margin-top:6px; writing-mode:vertical-rl; transform:rotate(180deg); max-height:60px; overflow:hidden; }
+.detail-panel { background:var(--surface); border-radius:var(--radius); border:1px solid var(--border); overflow:hidden; margin-bottom:32px; }
+.detail-header { padding:20px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; }
+.detail-header h3 { font-size:16px; }
+.site-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:1px; background:var(--border); }
+.site-card { background:var(--surface); padding:20px; }
+.site-card h4 { font-size:14px; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+.site-meta { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:8px; }
+.site-meta span { font-size:12px; color:var(--text2); }
+.site-meta strong { color:var(--text); }
+.fixes-list, .errors-list { list-style:none; padding:0; margin-top:8px; }
+.fixes-list li { font-size:12px; color:var(--ok); padding:2px 0; }
+.fixes-list li::before { content:"✓ "; }
+.errors-list li { font-size:12px; color:var(--crit); padding:2px 0; }
+.errors-list li::before { content:"⚠ "; }
+.empty-state { text-align:center; padding:60px 20px; color:var(--text2); }
+.empty-state h2 { margin-bottom:8px; }
+.legend { display:flex; gap:16px; justify-content:center; margin-bottom:16px; flex-wrap:wrap; }
+.legend-item { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--text2); }
+.legend-dot { width:10px; height:10px; border-radius:2px; }
+footer { text-align:center; padding:32px 0; color:var(--text3); font-size:12px; }
+@media(max-width:640px) { .stats-grid { grid-template-columns:repeat(2,1fr); } .site-cards { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>&#128737; WordPress Security Dashboard</h1>
+    <p>Monitoramento diário de segurança — Hostinger / AgenciAR Digital</p>
+  </header>
+
+  <div id="stats" class="stats-grid"></div>
+
+  <h2 class="section-title">&#128200; Histórico de Issues</h2>
+  <div class="chart-container">
+    <div class="legend">
+      <span class="legend-item"><span class="legend-dot" style="background:var(--ok)"></span> OK</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--warn)"></span> Atenção</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--crit)"></span> Crítico</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--info)"></span> Correções</span>
+    </div>
+    <div id="chart" class="chart-canvas"></div>
+  </div>
+
+  <h2 class="section-title">&#128197; Relatórios Diários</h2>
+  <div id="timeline" class="timeline"></div>
+
+  <div id="detail"></div>
+
+  <footer>
+    Agente: Infra · WordPress Ops — Hostinger &middot; AgenciAR Digital<br>
+    Dashboard atualizada automaticamente a cada execução de auditoria.
+  </footer>
+</div>
+
+<script>
+const DATA_BASE = './data/';
+let indexData = [];
+let currentReport = null;
+
+async function loadIndex() {
+  try {
+    const resp = await fetch(DATA_BASE + 'index.json');
+    indexData = await resp.json();
+  } catch(e) {
+    indexData = [];
+  }
+  renderStats();
+  renderChart();
+  renderTimeline();
+  if (indexData.length > 0) loadReport(indexData[0].file);
+}
+
+function renderStats() {
+  const el = document.getElementById('stats');
+  if (!indexData.length) {
+    el.innerHTML = '<div class="empty-state"><h2>Sem dados ainda</h2><p>Execute a primeira auditoria para popular a dashboard.</p></div>';
+    return;
+  }
+  const latest = indexData[0];
+  const totalReports = indexData.length;
+  const avgIssues = (indexData.reduce((a,b) => a + b.total_issues, 0) / totalReports).toFixed(1);
+  const totalFixes = indexData.reduce((a,b) => a + b.total_fixes, 0);
+  const statusColor = {ok:'var(--ok)',warning:'var(--warn)',critical:'var(--crit)'}[latest.overall_status] || 'var(--text)';
+  const statusLabel = {ok:'Seguro',warning:'Atenção',critical:'Crítico'}[latest.overall_status] || '?';
+  el.innerHTML = `
+    <div class="stat-card"><div class="stat-value" style="color:${statusColor}">${statusLabel}</div><div class="stat-label">Status Atual</div></div>
+    <div class="stat-card"><div class="stat-value">${latest.total_sites}</div><div class="stat-label">Sites Monitorados</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--ok)">${latest.ok}</div><div class="stat-label">Sites OK</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--warn)">${latest.warning}</div><div class="stat-label">Atenção</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--crit)">${latest.critical}</div><div class="stat-label">Críticos</div></div>
+    <div class="stat-card"><div class="stat-value">${totalReports}</div><div class="stat-label">Auditorias</div></div>
+    <div class="stat-card"><div class="stat-value">${avgIssues}</div><div class="stat-label">Média Issues/Dia</div></div>
+    <div class="stat-card"><div class="stat-value" style="color:var(--info)">${totalFixes}</div><div class="stat-label">Total Correções</div></div>
+  `;
+}
+
+function renderChart() {
+  const el = document.getElementById('chart');
+  const last30 = indexData.slice(0, 30).reverse();
+  if (!last30.length) { el.innerHTML = ''; return; }
+  const maxVal = Math.max(...last30.map(d => Math.max(d.total_issues, d.total_fixes, 1)));
+  el.innerHTML = last30.map(d => {
+    const okH = Math.max(2, (d.ok / d.total_sites) * 150);
+    const warnH = Math.max(d.warning > 0 ? 2 : 0, (d.warning / d.total_sites) * 150);
+    const critH = Math.max(d.critical > 0 ? 2 : 0, (d.critical / d.total_sites) * 150);
+    const fixH = Math.max(d.total_fixes > 0 ? 2 : 0, (d.total_fixes / Math.max(maxVal,1)) * 100);
+    return `<div class="chart-bar-group" onclick="loadReport('${d.file}')">
+      <div class="chart-bar" style="height:${critH}px;background:var(--crit);" data-tooltip="${d.critical} crítico(s)"></div>
+      <div class="chart-bar" style="height:${warnH}px;background:var(--warn);" data-tooltip="${d.warning} atenção"></div>
+      <div class="chart-bar" style="height:${okH}px;background:var(--ok);" data-tooltip="${d.ok} OK"></div>
+      <div class="chart-bar" style="height:${fixH}px;background:var(--info);" data-tooltip="${d.total_fixes} fix(es)"></div>
+      <span class="chart-label">${d.date.slice(5)}</span>
+    </div>`;
+  }).join('');
+}
+
+function renderTimeline() {
+  const el = document.getElementById('timeline');
+  if (!indexData.length) { el.innerHTML = ''; return; }
+  el.innerHTML = indexData.slice(0, 60).map(d => {
+    const dotClass = {ok:'status-ok',warning:'status-warn',critical:'status-crit'}[d.overall_status] || '';
+    return `<div class="timeline-item" data-file="${d.file}" onclick="loadReport('${d.file}')">
+      <div class="status-dot ${dotClass}"></div>
+      <span class="timeline-date">${d.date}</span>
+      <div class="timeline-badges">
+        <span class="badge badge-ok">${d.ok} OK</span>
+        ${d.warning > 0 ? `<span class="badge badge-warn">${d.warning} atenção</span>` : ''}
+        ${d.critical > 0 ? `<span class="badge badge-crit">${d.critical} crítico</span>` : ''}
+        ${d.total_fixes > 0 ? `<span class="badge badge-fix">${d.total_fixes} correções</span>` : ''}
+      </div>
+      <span style="font-size:12px;color:var(--text3);">${d.total_issues} issues</span>
+    </div>`;
+  }).join('');
+}
+
+async function loadReport(file) {
+  document.querySelectorAll('.timeline-item').forEach(el => {
+    el.classList.toggle('active', el.dataset.file === file);
+  });
+  try {
+    const resp = await fetch(DATA_BASE + file);
+    currentReport = await resp.json();
+    renderDetail();
+  } catch(e) {
+    document.getElementById('detail').innerHTML = '<p style="color:var(--crit);padding:20px;">Erro ao carregar relatório.</p>';
+  }
+}
+
+function renderDetail() {
+  if (!currentReport) return;
+  const el = document.getElementById('detail');
+  const r = currentReport;
+  const s = r.summary;
+  const statusColor = {ok:'var(--ok)',warning:'var(--warn)',critical:'var(--crit)'}[s.overall_status] || 'var(--text)';
+  const statusLabel = {ok:'Seguro',warning:'Atenção',critical:'Crítico'}[s.overall_status] || '?';
+
+  const sitesHtml = r.sites.map(site => {
+    const sc = {ok:'var(--ok)',warning:'var(--warn)',critical:'var(--crit)'}[site.severity] || 'var(--text)';
+    const sl = {ok:'Seguro',warning:'Atenção',critical:'Crítico'}[site.severity] || '?';
+    const activeP = (site.plugin_list||[]).filter(p=>p.status==='active').length;
+    const totalP = (site.plugin_list||[]).length;
+    const updatesP = (site.plugin_updates||[]).length;
+    const admins = (site.admin_users||[]).length;
+
+    let fixesHtml = '';
+    if (site.fixes_applied && site.fixes_applied.length) {
+      fixesHtml = '<ul class="fixes-list">' + site.fixes_applied.map(f => `<li>${f}</li>`).join('') + '</ul>';
+    }
+    let errorsHtml = '';
+    if (site.fix_errors && site.fix_errors.length) {
+      errorsHtml = '<ul class="errors-list">' + site.fix_errors.map(e => `<li>${e}</li>`).join('') + '</ul>';
+    }
+
+    return `<div class="site-card">
+      <h4><span class="status-dot" style="background:${sc};"></span> ${site.site} <span class="badge" style="background:${sc}22;color:${sc};">${sl}</span></h4>
+      <div class="site-meta">
+        <span><strong>HTTP:</strong> ${site.http_status}</span>
+        <span><strong>WP:</strong> ${site.wp_version||'?'}</span>
+        <span><strong>Plugins:</strong> ${activeP}/${totalP}</span>
+        <span><strong>Updates:</strong> ${updatesP}</span>
+        <span><strong>Admins:</strong> ${admins}</span>
+        <span><strong>Core:</strong> <span style="color:${site.core_integrity==='pass'?'var(--ok)':'var(--crit)'}">${site.core_integrity==='pass'?'OK':'FALHOU'}</span></span>
+      </div>
+      ${fixesHtml}${errorsHtml}
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `<div class="detail-panel">
+    <div class="detail-header">
+      <h3>&#128203; Relatório de ${r.date}</h3>
+      <span class="badge" style="background:${statusColor}22;color:${statusColor};font-size:14px;padding:6px 16px;">${statusLabel} — ${s.total_issues} issues, ${s.total_fixes} correções</span>
+    </div>
+    <div class="site-cards">${sitesHtml}</div>
+  </div>`;
+}
+
+loadIndex();
+</script>
+</body>
+</html>
