@@ -1,0 +1,2313 @@
+{
+  "date": "2026-11-03",
+  "timestamp": "2026-11-03T07:14:33Z",
+  "summary": {
+    "total_sites": 9,
+    "ok": 0,
+    "warning": 0,
+    "critical": 9,
+    "total_issues": 159,
+    "total_fixes": 9,
+    "overall_status": "critical"
+  },
+  "sites": [
+    {
+      "site": "abihrj.com.br",
+      "is_critical": true,
+      "http_status": 200,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "abih-rj-blue-horizon",
+          "status": "active",
+          "update": "none",
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "ai-engine",
+          "status": "active",
+          "update": "available",
+          "version": "3.8.8",
+          "update_version": "3.9.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "classic-widgets",
+          "status": "active",
+          "update": "none",
+          "version": "0.3",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "gn-publisher",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.28",
+          "update_version": "1.5.30",
+          "auto_update": "off"
+        },
+        {
+          "name": "header-footer",
+          "status": "active",
+          "update": "available",
+          "version": "3.3.2",
+          "update_version": "3.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates-plugin-70bdNBj5JM6qm1pl",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.65",
+          "update_version": "3.0.80",
+          "auto_update": "off"
+        },
+        {
+          "name": "leadin",
+          "status": "active",
+          "update": "available",
+          "version": "11.3.73",
+          "update_version": "11.3.75",
+          "auto_update": "off"
+        },
+        {
+          "name": "jannah-extensions",
+          "status": "active",
+          "update": "none",
+          "version": "1.1.5",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "jannah-optimization",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.2.11",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "litespeed-cache",
+          "status": "active",
+          "update": "none",
+          "version": "7.9.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "media-slider",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.1",
+          "update_version": "1.6.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "webp-uploads",
+          "status": "active",
+          "update": "available",
+          "version": "2.6.1",
+          "update_version": "2.7.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "one-user-avatar",
+          "status": "active",
+          "update": "none",
+          "version": "2.5.6",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "performance-lab",
+          "status": "inactive",
+          "update": "available",
+          "version": "4.0.1",
+          "update_version": "4.2.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "rss-importer",
+          "status": "active",
+          "update": "none",
+          "version": "0.3.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "simple-login-captcha",
+          "status": "active",
+          "update": "none",
+          "version": "1.3.6",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "google-site-kit",
+          "status": "active",
+          "update": "available",
+          "version": "1.190.0",
+          "update_version": "1.191.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "gemini-content-tool",
+          "status": "inactive",
+          "update": "none",
+          "version": "2.6.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "gemini-auto-poster",
+          "status": "inactive",
+          "update": "none",
+          "version": "2.4.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wp-graphql",
+          "status": "active",
+          "update": "available",
+          "version": "2.25.0",
+          "update_version": "2.26.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "wp-rss-aggregator",
+          "status": "inactive",
+          "update": "none",
+          "version": "5.6.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "duplicate-post",
+          "status": "active",
+          "update": "none",
+          "version": "4.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wordpress-seo",
+          "status": "active",
+          "update": "none",
+          "version": "26.8",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wpseo-news",
+          "status": "active",
+          "update": "none",
+          "version": "13.3",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wordpress-seo-premium",
+          "status": "active",
+          "update": "none",
+          "version": "26.8",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "quick-edit-yoastseo",
+          "status": "active",
+          "update": "none",
+          "version": "1.0.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "abihrj-calendarios-listagens",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "egoi-abihrj-tracking",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "abihrj-pacotes-zoho-form",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "abihrj-ux-otimizacoes",
+          "status": "must-use",
+          "update": false,
+          "version": "1.2.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.7",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [
+        {
+          "name": "ai-engine",
+          "status": "active",
+          "update": "available",
+          "version": "3.8.8",
+          "update_version": "3.9.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "gn-publisher",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.28",
+          "update_version": "1.5.30",
+          "auto_update": "off"
+        },
+        {
+          "name": "header-footer",
+          "status": "active",
+          "update": "available",
+          "version": "3.3.2",
+          "update_version": "3.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.65",
+          "update_version": "3.0.80",
+          "auto_update": "off"
+        },
+        {
+          "name": "leadin",
+          "status": "active",
+          "update": "available",
+          "version": "11.3.73",
+          "update_version": "11.3.75",
+          "auto_update": "off"
+        },
+        {
+          "name": "media-slider",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.1",
+          "update_version": "1.6.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "webp-uploads",
+          "status": "active",
+          "update": "available",
+          "version": "2.6.1",
+          "update_version": "2.7.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "performance-lab",
+          "status": "inactive",
+          "update": "available",
+          "version": "4.0.1",
+          "update_version": "4.2.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "google-site-kit",
+          "status": "active",
+          "update": "available",
+          "version": "1.190.0",
+          "update_version": "1.191.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "wp-graphql",
+          "status": "active",
+          "update": "available",
+          "version": "2.25.0",
+          "update_version": "2.26.0",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_integrity": "pass",
+      "theme_updates": [],
+      "admin_users": [
+        {
+          "ID": 1,
+          "user_login": "admin",
+          "user_email": "marketing@hoteisrio.com.br",
+          "user_registered": "2024-08-02 13:01:31"
+        }
+      ],
+      "suspicious_files": [
+        "/home/u306535956/domains/abihrj.com.br/public_html/associe-se.zip",
+        "/home/u306535956/domains/abihrj.com.br/public_html/estatisticas.zip"
+      ],
+      "nulled_plugins": [
+        "/home/u306535956/domains/abihrj.com.br/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/abihrj.com.br/public_html/wp-content/plugins/hostinger/includes/Deactivator.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Jan 28 13:36:11 2027 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "Failed to quarantine: associe-se.zip",
+        "Failed to quarantine: estatisticas.zip",
+        "CRITICAL: 2 nulled/malicious file(s) — manual review required",
+        "CRITICAL SITE: 10 plugin update(s) pending — manual approval required"
+      ],
+      "total_issues": 15,
+      "severity": "critical",
+      "total_fixes": 1
+    },
+    {
+      "site": "sindhoteisrj.com.br",
+      "is_critical": true,
+      "http_status": 200,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "abih-rj-blue-horizon",
+          "status": "active",
+          "update": "none",
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "classic-widgets",
+          "status": "active",
+          "update": "none",
+          "version": "0.3",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "gn-publisher",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.26",
+          "update_version": "1.5.30",
+          "auto_update": "off"
+        },
+        {
+          "name": "header-footer",
+          "status": "active",
+          "update": "available",
+          "version": "3.3.2",
+          "update_version": "3.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.39",
+          "update_version": "3.1.7",
+          "auto_update": "on"
+        },
+        {
+          "name": "hostinger-auto-updates-plugin-pqmg8GWcsKCKpHu2",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.65",
+          "update_version": "3.0.80",
+          "auto_update": "on"
+        },
+        {
+          "name": "hoteisrio-elementor-compat",
+          "status": "active",
+          "update": "none",
+          "version": "1.0.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "litespeed-cache",
+          "status": "active",
+          "update": "none",
+          "version": "7.9.2",
+          "update_version": "",
+          "auto_update": "on"
+        },
+        {
+          "name": "login-lockdown",
+          "status": "active",
+          "update": "none",
+          "version": "2.19",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "media-slider",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.0",
+          "update_version": "1.6.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "meeek",
+          "status": "active",
+          "update": "none",
+          "version": "1.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "webp-uploads",
+          "status": "active",
+          "update": "available",
+          "version": "2.5.1",
+          "update_version": "2.7.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "og",
+          "status": "inactive",
+          "update": "available",
+          "version": "3.3.7",
+          "update_version": "3.4.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "optimization-detective",
+          "status": "active",
+          "update": "available",
+          "version": "1.0.0-beta3",
+          "update_version": "1.0.0-beta7",
+          "auto_update": "off"
+        },
+        {
+          "name": "penci-framework",
+          "status": "active",
+          "update": "none",
+          "version": "6.6.5",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "performance-lab",
+          "status": "active",
+          "update": "available",
+          "version": "3.9.0",
+          "update_version": "4.2.0",
+          "auto_update": "on"
+        },
+        {
+          "name": "seo-by-rank-math",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.0.280",
+          "update_version": "",
+          "auto_update": "on"
+        },
+        {
+          "name": "rss-importer",
+          "status": "active",
+          "update": "none",
+          "version": "0.3.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "google-site-kit",
+          "status": "active",
+          "update": "available",
+          "version": "1.190.0",
+          "update_version": "1.191.0",
+          "auto_update": "on"
+        },
+        {
+          "name": "web-stories-generator",
+          "status": "active",
+          "update": "none",
+          "version": "2.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wordpress-mcp",
+          "status": "active",
+          "update": "none",
+          "version": "0.2.4",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "js_composer",
+          "status": "active",
+          "update": "available",
+          "version": "6.10.0",
+          "update_version": "9.0.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "duplicate-post",
+          "status": "inactive",
+          "update": "none",
+          "version": "4.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wordpress-seo",
+          "status": "active",
+          "update": "none",
+          "version": "26.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wpseo-news",
+          "status": "active",
+          "update": "none",
+          "version": "13.3",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wordpress-seo-premium",
+          "status": "active",
+          "update": "none",
+          "version": "26.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "sindhoteis-qualidade-indice",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "yoast-og-featured-fix",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "object-cache.php",
+          "status": "dropin",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "gn-publisher",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.26",
+          "update_version": "1.5.30",
+          "auto_update": "off"
+        },
+        {
+          "name": "header-footer",
+          "status": "active",
+          "update": "available",
+          "version": "3.3.2",
+          "update_version": "3.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.39",
+          "update_version": "3.1.7",
+          "auto_update": "on"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.65",
+          "update_version": "3.0.80",
+          "auto_update": "on"
+        },
+        {
+          "name": "media-slider",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.0",
+          "update_version": "1.6.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "webp-uploads",
+          "status": "active",
+          "update": "available",
+          "version": "2.5.1",
+          "update_version": "2.7.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "og",
+          "status": "inactive",
+          "update": "available",
+          "version": "3.3.7",
+          "update_version": "3.4.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "optimization-detective",
+          "status": "active",
+          "update": "available",
+          "version": "1.0.0-beta3",
+          "update_version": "1.0.0-beta7",
+          "auto_update": "off"
+        },
+        {
+          "name": "performance-lab",
+          "status": "active",
+          "update": "available",
+          "version": "3.9.0",
+          "update_version": "4.2.0",
+          "auto_update": "on"
+        },
+        {
+          "name": "google-site-kit",
+          "status": "active",
+          "update": "available",
+          "version": "1.190.0",
+          "update_version": "1.191.0",
+          "auto_update": "on"
+        },
+        {
+          "name": "js_composer",
+          "status": "active",
+          "update": "available",
+          "version": "6.10.0",
+          "update_version": "9.0.1",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_integrity": "pass",
+      "theme_updates": [],
+      "admin_users": [
+        {
+          "ID": 1,
+          "user_login": "admin",
+          "user_email": "marketing@sindhoteisrj.com.br",
+          "user_registered": "2023-04-05 16:30:28"
+        }
+      ],
+      "suspicious_files": [
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/sp-push.zip",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/bancotalentos/ClientDetails_Attachments_1.zip",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/portalapi/default.php.bak",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/ia/aikeedo-server-files.zip"
+      ],
+      "nulled_plugins": [
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/wp-content/plugins/hostinger/includes/Deactivator.php",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.js",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.min.js",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/wp-content/plugins/hostinger-ai-assistant/includes/class-hostinger-ai-assistant-deactivator.php",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/wp-content/plugins/hostinger-ai-assistant/hostinger-ai-assistant.php",
+        "/home/u306535956/domains/sindhoteisrj.com.br/public_html/wp-content/plugins/js_composer/include/helpers/helpers_api.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Jan 12 02:45:58 2027 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "Failed to quarantine: sp-push.zip",
+        "Failed to quarantine: ClientDetails_Attachments_1.zip",
+        "Failed to quarantine: default.php.bak",
+        "Failed to quarantine: aikeedo-server-files.zip",
+        "CRITICAL: 7 nulled/malicious file(s) — manual review required",
+        "CRITICAL SITE: 12 plugin update(s) pending — manual approval required"
+      ],
+      "total_issues": 24,
+      "severity": "critical",
+      "total_fixes": 1
+    },
+    {
+      "site": "hoteisrio.com.br",
+      "is_critical": false,
+      "http_status": 200,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "all-in-one-wp-migration",
+          "status": "active",
+          "update": "none",
+          "version": "7.113",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "duplicate-page",
+          "status": "active",
+          "update": "none",
+          "version": "4.5.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.17",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates-plugin-IK57duV4ymZE7tq1",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "none",
+          "version": "3.0.80",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "litespeed-cache",
+          "status": "active",
+          "update": "none",
+          "version": "7.9.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "royal-elementor-addons",
+          "status": "active",
+          "update": "none",
+          "version": "1.7.1070",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "google-site-kit",
+          "status": "active",
+          "update": "available",
+          "version": "1.190.0",
+          "update_version": "1.191.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "sticky-header-effects-for-elementor",
+          "status": "active",
+          "update": "none",
+          "version": "2.2.3",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "header-footer-elementor",
+          "status": "active",
+          "update": "none",
+          "version": "2.9.6",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "ultimate-post-kit",
+          "status": "active",
+          "update": "none",
+          "version": "4.6.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wp-reviews-plugin-for-google",
+          "status": "active",
+          "update": "available",
+          "version": "13.3.1",
+          "update_version": "14.3",
+          "auto_update": "off"
+        },
+        {
+          "name": "wordpress-importer",
+          "status": "active",
+          "update": "none",
+          "version": "0.9.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wpvivid-backuprestore",
+          "status": "active",
+          "update": "available",
+          "version": "0.9.136",
+          "update_version": "0.9.139",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.7",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.17",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "google-site-kit",
+          "status": "active",
+          "update": "available",
+          "version": "1.190.0",
+          "update_version": "1.191.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "wp-reviews-plugin-for-google",
+          "status": "active",
+          "update": "available",
+          "version": "13.3.1",
+          "update_version": "14.3",
+          "auto_update": "off"
+        },
+        {
+          "name": "wpvivid-backuprestore",
+          "status": "active",
+          "update": "available",
+          "version": "0.9.136",
+          "update_version": "0.9.139",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_integrity": "pass",
+      "theme_updates": [],
+      "admin_users": [
+        {
+          "ID": 2,
+          "user_login": ".admin.",
+          "user_email": "morocco2024@protonmail.com",
+          "user_registered": "2025-06-21 18:46:22"
+        },
+        {
+          "ID": 1,
+          "user_login": "micaela",
+          "user_email": "micaela@descomplicandosites.com.br",
+          "user_registered": "2024-01-21 19:47:05"
+        }
+      ],
+      "suspicious_files": [
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/clippings/codecanyon-68i1kQ7Q-inbefore-news-aggregator-search-engine-youtube-downloader.zip",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/cursos/Academy-LMS.zip",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/clipping/codecanyon-68i1kQ7Q-inbefore-news-aggregator-search-engine-youtube-downloader.zip",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/ia/MagicAI 7.2.2.zip"
+      ],
+      "nulled_plugins": [
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/hostinger/includes/Deactivator.php",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/loader.php",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/includes/Deactivator.php",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_classmap.php",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_static.php",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/jetpack_autoload_classmap.php",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.js",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.min.js",
+        "/home/u306535956/domains/hoteisrio.com.br/public_html/wp-content/plugins/hostinger-ai-assistant/includes/class-hostinger-ai-assistant-deactivator.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Jan 12 00:11:46 2027 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "Failed to quarantine: codecanyon-68i1kQ7Q-inbefore-news-aggregator-search-engine-youtube-downloader.zip",
+        "Failed to quarantine: Academy-LMS.zip",
+        "Failed to quarantine: codecanyon-68i1kQ7Q-inbefore-news-aggregator-search-engine-youtube-downloader.zip",
+        "Failed to quarantine: MagicAI 7.2.2.zip",
+        "CRITICAL: 10 nulled/malicious file(s) — manual review required",
+        "Skipped plugin updates — backup failed: mysqldump error"
+      ],
+      "total_issues": 21,
+      "severity": "critical",
+      "total_fixes": 1
+    },
+    {
+      "site": "visit-rj.com",
+      "is_critical": true,
+      "http_status": 200,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "tinymce-advanced",
+          "status": "inactive",
+          "update": "available",
+          "version": "5.9.2",
+          "update_version": "5.10.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "ai-engine",
+          "status": "active",
+          "update": "available",
+          "version": "3.8.9",
+          "update_version": "3.9.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "contact-form-7",
+          "status": "active",
+          "update": "available",
+          "version": "6.0.6",
+          "update_version": "6.2.4.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "copy-delete-posts",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.5.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "woocommerce-currency-switcher",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.5",
+          "update_version": "1.5.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "gtranslate",
+          "status": "active",
+          "update": "available",
+          "version": "5.0.1",
+          "update_version": "5.0.2",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.38",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.17",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.65",
+          "update_version": "3.0.80",
+          "auto_update": "off"
+        },
+        {
+          "name": "litespeed-cache",
+          "status": "active",
+          "update": "none",
+          "version": "7.9.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "loco-translate",
+          "status": "active",
+          "update": "none",
+          "version": "2.8.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "mailchimp-for-wp",
+          "status": "inactive",
+          "update": "none",
+          "version": "4.14.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "seo-by-rank-math",
+          "status": "active",
+          "update": "none",
+          "version": "1.0.280",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "rss-importer",
+          "status": "active",
+          "update": "none",
+          "version": "0.3.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "google-site-kit",
+          "status": "active",
+          "update": "available",
+          "version": "1.187.0",
+          "update_version": "1.191.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "traveler-code",
+          "status": "active",
+          "update": "none",
+          "version": "3.1.3",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "traveler-layout-essential-for-elementor",
+          "status": "active",
+          "update": "none",
+          "version": "1.5",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "traveler-mercadopago",
+          "status": "active",
+          "update": "none",
+          "version": "2.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "st-option-tree",
+          "status": "active",
+          "update": "none",
+          "version": "2.8",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "traveler-paypal-v2",
+          "status": "active",
+          "update": "none",
+          "version": "1.6",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "traveler-smart-search",
+          "status": "active",
+          "update": "none",
+          "version": "1.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "vina-stripe",
+          "status": "active",
+          "update": "none",
+          "version": "1.5",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "visit-rj-international-seo",
+          "status": "active",
+          "update": "none",
+          "version": "3.5.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "woocommerce",
+          "status": "active",
+          "update": "available",
+          "version": "11.2.0",
+          "update_version": "11.2.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "wordpress-importer",
+          "status": "active",
+          "update": "available",
+          "version": "0.9.5",
+          "update_version": "0.9.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "js_composer",
+          "status": "active",
+          "update": "available",
+          "version": "8.5",
+          "update_version": "9.0.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "duplicate-post",
+          "status": "active",
+          "update": "none",
+          "version": "4.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-preview-domain",
+          "status": "must-use",
+          "update": false,
+          "version": "1.4.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "object-cache.php",
+          "status": "dropin",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [
+        {
+          "name": "tinymce-advanced",
+          "status": "inactive",
+          "update": "available",
+          "version": "5.9.2",
+          "update_version": "5.10.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "ai-engine",
+          "status": "active",
+          "update": "available",
+          "version": "3.8.9",
+          "update_version": "3.9.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "contact-form-7",
+          "status": "active",
+          "update": "available",
+          "version": "6.0.6",
+          "update_version": "6.2.4.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "woocommerce-currency-switcher",
+          "status": "active",
+          "update": "available",
+          "version": "1.5.5",
+          "update_version": "1.5.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "gtranslate",
+          "status": "active",
+          "update": "available",
+          "version": "5.0.1",
+          "update_version": "5.0.2",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.38",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.17",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "available",
+          "version": "3.0.65",
+          "update_version": "3.0.80",
+          "auto_update": "off"
+        },
+        {
+          "name": "google-site-kit",
+          "status": "active",
+          "update": "available",
+          "version": "1.187.0",
+          "update_version": "1.191.0",
+          "auto_update": "off"
+        },
+        {
+          "name": "woocommerce",
+          "status": "active",
+          "update": "available",
+          "version": "11.2.0",
+          "update_version": "11.2.1",
+          "auto_update": "off"
+        },
+        {
+          "name": "wordpress-importer",
+          "status": "active",
+          "update": "available",
+          "version": "0.9.5",
+          "update_version": "0.9.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "js_composer",
+          "status": "active",
+          "update": "available",
+          "version": "8.5",
+          "update_version": "9.0.1",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_integrity": "pass",
+      "theme_updates": [
+        {
+          "name": "traveler",
+          "status": "active",
+          "update": "available",
+          "version": "3.3",
+          "update_version": "3.4",
+          "auto_update": "off"
+        },
+        {
+          "name": "twentytwentyfive",
+          "status": "inactive",
+          "update": "available",
+          "version": "1.2",
+          "update_version": "1.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "twentytwentyfour",
+          "status": "inactive",
+          "update": "available",
+          "version": "1.3",
+          "update_version": "1.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "twentytwentythree",
+          "status": "inactive",
+          "update": "available",
+          "version": "1.6",
+          "update_version": "1.7",
+          "auto_update": "off"
+        }
+      ],
+      "admin_users": [
+        {
+          "ID": 1,
+          "user_login": "marketing@hoteisrio.com.br",
+          "user_email": "marketing@hoteisrio.com.br",
+          "user_registered": "2025-06-24 19:26:46"
+        }
+      ],
+      "suspicious_files": [],
+      "nulled_plugins": [
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/hostinger/includes/Deactivator.php",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/hostinger-easy-onboarding/loader.php",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/hostinger-easy-onboarding/includes/Deactivator.php",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_classmap.php",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_static.php",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/jetpack_autoload_classmap.php",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.js",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.min.js",
+        "/home/u306535956/domains/visit-rj.com/public_html/wp-content/plugins/hostinger-ai-assistant/includes/class-hostinger-ai-assistant-deactivator.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Jan 16 02:04:59 2027 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "CRITICAL: 10 nulled/malicious file(s) — manual review required",
+        "CRITICAL SITE: 13 plugin update(s) pending — manual approval required"
+      ],
+      "total_issues": 28,
+      "severity": "critical",
+      "total_fixes": 1
+    },
+    {
+      "site": "iamagica.online",
+      "is_critical": false,
+      "http_status": 200,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "all-in-one-seo-pack",
+          "status": "active",
+          "update": "none",
+          "version": "5.0.4",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "none",
+          "version": "4.3.6",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "none",
+          "version": "3.1.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "none",
+          "version": "3.0.5",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-reach",
+          "status": "active",
+          "update": "none",
+          "version": "1.8.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates-plugin-UZBBScmPJqcPMv4A",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates-plugin-ktr6xrpcgwZ6QNj4",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "none",
+          "version": "3.0.80",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "miniorange-secure-mcp-server",
+          "status": "active",
+          "update": "none",
+          "version": "1.5.5",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "wpforms-lite",
+          "status": "active",
+          "update": "none",
+          "version": "2.0.3.1",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "adsense-code",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "iamagica-content-wrap",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "iamagica-seo-dedupe",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "iamagica-official-domain",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "iamagica-blog-notice",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "iamagica-integracoes",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "iamagica-radar-oficial",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "iamagica-google-verification",
+          "status": "must-use",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [],
+      "plugin_integrity": "pass",
+      "theme_updates": [],
+      "admin_users": [
+        {
+          "ID": 1,
+          "user_login": "admin",
+          "user_email": "contato@iamagica.online",
+          "user_registered": "2026-09-13 05:03:19"
+        }
+      ],
+      "suspicious_files": [
+        "/home/u306535956/domains/iamagica.online/public_html/magicai.sql",
+        "/home/u306535956/domains/iamagica.online/public_html/claude-landing/backup-conversas-claude.zip"
+      ],
+      "nulled_plugins": [
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/hostinger/includes/Deactivator.php",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/hostinger-easy-onboarding/loader.php",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/hostinger-easy-onboarding/includes/Deactivator.php",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_classmap.php",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_static.php",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/jetpack_autoload_classmap.php",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.js",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.min.js",
+        "/home/u306535956/domains/iamagica.online/public_html/wp-content/plugins/hostinger-ai-assistant/includes/class-hostinger-ai-assistant-deactivator.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Dec 11 11:39:07 2026 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "Failed to quarantine: magicai.sql",
+        "Failed to quarantine: backup-conversas-claude.zip",
+        "CRITICAL: 10 nulled/malicious file(s) — manual review required"
+      ],
+      "total_issues": 13,
+      "severity": "critical",
+      "total_fixes": 1
+    },
+    {
+      "site": "hotelariaeturismo.com.br",
+      "is_critical": false,
+      "http_status": 404,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.17",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-preview-domain-ImHalAzAQbbcVrCi",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.4.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-reach",
+          "status": "active",
+          "update": "none",
+          "version": "1.8.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates-plugin-G79VumzKkQnMlEmO",
+          "status": "inactive",
+          "update": "none",
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "none",
+          "version": "3.0.80",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "litespeed-cache",
+          "status": "active",
+          "update": "none",
+          "version": "7.9.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "td-cloud-library",
+          "status": "active",
+          "update": "none",
+          "version": "3.9 | built on 27.03.2025 10:27",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "td-composer",
+          "status": "active",
+          "update": "none",
+          "version": "5.4.1 | built on 29.04.2025 10:27",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "td-social-counter",
+          "status": "active",
+          "update": "none",
+          "version": "5.6 | built on 04.09.2025 12:51",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-preview-domain",
+          "status": "must-use",
+          "update": false,
+          "version": "1.4.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "object-cache.php",
+          "status": "dropin",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.17",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_integrity": "pass",
+      "theme_updates": [],
+      "admin_users": [
+        {
+          "ID": 1,
+          "user_login": "marketing@hoteisrio.com.br",
+          "user_email": "marketing@hoteisrio.com.br",
+          "user_registered": "2025-10-02 12:59:12"
+        }
+      ],
+      "suspicious_files": [],
+      "nulled_plugins": [
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/hostinger/includes/Deactivator.php",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/loader.php",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/includes/Deactivator.php",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_classmap.php",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_static.php",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/jetpack_autoload_classmap.php",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.js",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.min.js",
+        "/home/u306535956/domains/hotelariaeturismo.com.br/public_html/wp-content/plugins/hostinger-ai-assistant/includes/class-hostinger-ai-assistant-deactivator.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Jan 16 21:14:54 2027 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "CRITICAL: 10 nulled/malicious file(s) — manual review required",
+        "Skipped plugin updates — backup failed: mysqldump error"
+      ],
+      "total_issues": 15,
+      "severity": "critical",
+      "total_fixes": 1
+    },
+    {
+      "site": "blog.agenciarmktdigital.com.br",
+      "is_critical": false,
+      "http_status": 200,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.38",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-reach",
+          "status": "active",
+          "update": "none",
+          "version": "1.8.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "none",
+          "version": "3.0.80",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "litespeed-cache",
+          "status": "active",
+          "update": "none",
+          "version": "7.9.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-preview-domain",
+          "status": "must-use",
+          "update": false,
+          "version": "1.4.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "object-cache.php",
+          "status": "dropin",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.38",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_integrity": "pass",
+      "theme_updates": [],
+      "admin_users": [
+        {
+          "ID": 1,
+          "user_login": "cspgabriel@outlook.com.br",
+          "user_email": "cspgabriel@outlook.com.br",
+          "user_registered": "2026-09-13 05:44:49"
+        }
+      ],
+      "suspicious_files": [
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/publish_editorial_json.php.bak"
+      ],
+      "nulled_plugins": [
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/hostinger/includes/Deactivator.php",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/loader.php",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/includes/Deactivator.php",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_classmap.php",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_static.php",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/jetpack_autoload_classmap.php",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.js",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.min.js",
+        "/home/u306535956/domains/blog.agenciarmktdigital.com.br/public_html/wp-content/plugins/hostinger-ai-assistant/includes/class-hostinger-ai-assistant-deactivator.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Dec 12 14:17:00 2026 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "Failed to quarantine: publish_editorial_json.php.bak",
+        "CRITICAL: 10 nulled/malicious file(s) — manual review required",
+        "Skipped plugin updates — backup failed: mysqldump error"
+      ],
+      "total_issues": 15,
+      "severity": "critical",
+      "total_fixes": 1
+    },
+    {
+      "site": "blog.criacaodesitesbr.com",
+      "is_critical": false,
+      "http_status": 200,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.38",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-reach",
+          "status": "active",
+          "update": "none",
+          "version": "1.8.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "none",
+          "version": "3.0.80",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "litespeed-cache",
+          "status": "active",
+          "update": "none",
+          "version": "7.9.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-preview-domain",
+          "status": "must-use",
+          "update": false,
+          "version": "1.4.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "object-cache.php",
+          "status": "dropin",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.38",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_integrity": "pass",
+      "theme_updates": [],
+      "admin_users": [
+        {
+          "ID": 1,
+          "user_login": "cspgabriel@outlook.com.br",
+          "user_email": "cspgabriel@outlook.com.br",
+          "user_registered": "2026-09-13 05:40:22"
+        }
+      ],
+      "suspicious_files": [],
+      "nulled_plugins": [
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/hostinger/includes/Deactivator.php",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/hostinger-easy-onboarding/loader.php",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/hostinger-easy-onboarding/includes/Deactivator.php",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_classmap.php",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_static.php",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/jetpack_autoload_classmap.php",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.js",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.min.js",
+        "/home/u306535956/domains/blog.criacaodesitesbr.com/public_html/wp-content/plugins/hostinger-ai-assistant/includes/class-hostinger-ai-assistant-deactivator.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Dec 20 11:59:35 2026 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "CRITICAL: 10 nulled/malicious file(s) — manual review required",
+        "Skipped plugin updates — backup failed: mysqldump error"
+      ],
+      "total_issues": 14,
+      "severity": "critical",
+      "total_fixes": 1
+    },
+    {
+      "site": "blog.leisedecretosrj.com.br",
+      "is_critical": false,
+      "http_status": 200,
+      "wp_version": "7.1.4",
+      "core_updates": [],
+      "core_integrity": "pass",
+      "plugin_list": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.38",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-reach",
+          "status": "active",
+          "update": "none",
+          "version": "1.8.7",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger",
+          "status": "active",
+          "update": "none",
+          "version": "3.0.80",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "litespeed-cache",
+          "status": "active",
+          "update": "none",
+          "version": "7.9.2",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-preview-domain",
+          "status": "must-use",
+          "update": false,
+          "version": "1.4.0",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-auto-updates",
+          "status": "must-use",
+          "update": false,
+          "version": "1.0.9",
+          "update_version": "",
+          "auto_update": "off"
+        },
+        {
+          "name": "object-cache.php",
+          "status": "dropin",
+          "update": false,
+          "version": "",
+          "update_version": "",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_updates": [
+        {
+          "name": "elementor",
+          "status": "active",
+          "update": "available",
+          "version": "4.3.5",
+          "update_version": "4.3.6",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-ai-assistant",
+          "status": "active",
+          "update": "available",
+          "version": "3.1.6",
+          "update_version": "3.1.7",
+          "auto_update": "off"
+        },
+        {
+          "name": "hostinger-easy-onboarding",
+          "status": "active",
+          "update": "available",
+          "version": "2.1.38",
+          "update_version": "3.0.5",
+          "auto_update": "off"
+        }
+      ],
+      "plugin_integrity": "pass",
+      "theme_updates": [],
+      "admin_users": [
+        {
+          "ID": 1,
+          "user_login": "cspgabriel@outlook.com.br",
+          "user_email": "cspgabriel@outlook.com.br",
+          "user_registered": "2026-09-13 05:48:22"
+        }
+      ],
+      "suspicious_files": [],
+      "nulled_plugins": [
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/hostinger/hostinger.php",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/hostinger/includes/Deactivator.php",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/loader.php",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/includes/Deactivator.php",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_classmap.php",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/autoload_static.php",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/hostinger-easy-onboarding/vendor/composer/jetpack_autoload_classmap.php",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.js",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/elementor/assets/js/packages/ui/ui.min.js",
+        "/home/u306535956/domains/blog.leisedecretosrj.com.br/public_html/wp-content/plugins/hostinger-ai-assistant/includes/class-hostinger-ai-assistant-deactivator.php"
+      ],
+      "wp_config_perms": "644",
+      "htaccess_perms": "644",
+      "ssl_expiry": "Jan 26 00:21:35 2027 GMT",
+      "timestamp": "2026-11-03T07:14:33Z",
+      "fixes_applied": [
+        "wp-config.php permissions: 644 → 440"
+      ],
+      "fix_errors": [
+        "CRITICAL: 10 nulled/malicious file(s) — manual review required",
+        "Skipped plugin updates — backup failed: mysqldump error"
+      ],
+      "total_issues": 14,
+      "severity": "critical",
+      "total_fixes": 1
+    }
+  ]
+}

@@ -12,7 +12,7 @@ set +a
 echo "=== WP Security Audit Runner ==="
 echo "Started: $(date)"
 
-REPORT_PATH=$("$SCRIPT_DIR/wp-security-audit.sh")
+REPORT_PATH=$(python3 -I "$SCRIPT_DIR/wp-security-audit.py")
 echo "Audit complete: $REPORT_PATH"
 
 echo "Generating HTML report and sending email..."

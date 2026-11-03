@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "date": "2026-11-03",
+    "file": "2026-11-03.json",
+    "overall_status": "critical",
+    "total_sites": 9,
+    "ok": 0,
+    "warning": 0,
+    "critical": 9,
+    "total_issues": 159,
+    "total_fixes": 9
+  }
+]
