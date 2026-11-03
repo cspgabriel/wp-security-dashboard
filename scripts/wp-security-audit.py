@@ -115,13 +115,24 @@ def audit_site(site):
     data["core_updates"] = parse_json_or_empty(wp_cmd(site, "core check-update --format=json"))
 
     checksums = wp_cmd(site, "core verify-checksums 2>&1")
-    data["core_integrity"] = "fail" if re.search(r"warning|error|mismatch", checksums, re.I) else "pass"
+    # Filter out known benign warnings (wp-config-sample.php is often modified by hosts)
+    checksums_real = "\n".join(
+        line for line in checksums.split("\n")
+        if "wp-config-sample.php" not in line and ".rnd" not in line
+    )
+    data["core_integrity"] = "fail" if re.search(r"should not exist|doesn't verify", checksums_real, re.I) else "pass"
 
     data["plugin_list"] = parse_json_or_empty(wp_cmd(site, "plugin list --format=json"))
     data["plugin_updates"] = parse_json_or_empty(wp_cmd(site, "plugin list --update=available --format=json"))
 
     p_checksums = wp_cmd(site, "plugin verify-checksums --all 2>&1")
-    data["plugin_integrity"] = "fail" if re.search(r"warning|error|could not", p_checksums, re.I) else "pass"
+    # "Could not retrieve checksums" means plugin isn't on WP.org (custom/premium/hostinger) — not a real issue
+    # Only flag actual checksum mismatches
+    p_checksums_real = "\n".join(
+        line for line in p_checksums.split("\n")
+        if "Could not retrieve" not in line and "Couldn't fetch" not in line
+    )
+    data["plugin_integrity"] = "fail" if re.search(r"doesn't verify|should not exist|mismatch", p_checksums_real, re.I) else "pass"
 
     data["theme_updates"] = parse_json_or_empty(wp_cmd(site, "theme list --update=available --format=json"))
     data["admin_users"] = parse_json_or_empty(wp_cmd(site, "user list --role=administrator --format=json --fields=ID,user_login,user_email,user_registered"))
@@ -131,10 +142,21 @@ def audit_site(site):
     )
     data["suspicious_files"] = [f for f in suspicious_raw.split("\n") if f.strip() and "SSH_ERROR" not in f]
 
-    nulled_raw = ssh_cmd(
-        f"grep -rl 'nulled\\|GPL Starter\\|activator\\|wso shell\\|c99shell\\|r57shell\\|b374k' ~/domains/{site}/public_html/wp-content/plugins/ 2>/dev/null | head -10"
+    # Detect real malware: PHP files injected into WP core dirs (wp-admin/wp-includes)
+    # that don't belong there (files WP core verify-checksums flags as "should not exist")
+    injected_raw = ssh_cmd(
+        f"cd ~/domains/{site}/public_html && wp core verify-checksums 2>&1 | grep 'should not exist' | sed 's/Warning: File should not exist: //'",
+        timeout=60,
     )
-    data["nulled_plugins"] = [f for f in nulled_raw.split("\n") if f.strip() and "SSH_ERROR" not in f]
+    data["injected_core_files"] = [f for f in injected_raw.split("\n") if f.strip() and "SSH_ERROR" not in f and f.strip().endswith(".php")]
+
+    # Detect actual webshells/backdoors (precise patterns, not generic words)
+    webshell_raw = ssh_cmd(
+        f"grep -rln 'Tiny File Manager\\|FilesMan\\|WSO \\|Web Shell\\|c99shell\\|r57shell\\|b374k\\|FileSpy\\|Fake WordPress' ~/domains/{site}/public_html/wp-admin/ ~/domains/{site}/public_html/wp-includes/ 2>/dev/null | head -10"
+    )
+    data["webshells"] = [f for f in webshell_raw.split("\n") if f.strip() and "SSH_ERROR" not in f]
+
+    data["nulled_plugins"] = data["injected_core_files"] + data["webshells"]
 
     data["wp_config_perms"] = ssh_cmd(f"stat -c '%a' ~/domains/{site}/public_html/wp-config.php 2>/dev/null").replace("'", "").strip()
     data["htaccess_perms"] = ssh_cmd(f"stat -c '%a' ~/domains/{site}/public_html/.htaccess 2>/dev/null").replace("'", "").strip()
@@ -172,11 +194,32 @@ def apply_fixes(site, data):
             else:
                 errors.append(f"Failed to quarantine: {fname}")
 
-    if data.get("nulled_plugins"):
-        errors.append(f"CRITICAL: {len(data['nulled_plugins'])} nulled/malicious file(s) — manual review required")
+    # Auto-quarantine injected PHP files in WP core directories
+    if data.get("injected_core_files"):
+        quarantine = f"{BACKUP_REMOTE_DIR}/{site}/quarantine_malware_{datetime.now().strftime('%Y%m%d')}"
+        ssh_cmd(f"mkdir -p {quarantine}")
+        for fpath in data["injected_core_files"]:
+            fname = os.path.basename(fpath)
+            full_path = f"~/domains/{site}/public_html/{fpath}"
+            result = ssh_cmd(f"mv '{full_path}' '{quarantine}/{fname}' 2>/dev/null && echo OK || echo FAIL")
+            if "OK" in result:
+                fixes.append(f"MALWARE REMOVED: {fpath} → quarantine")
+            else:
+                errors.append(f"CRITICAL: Failed to quarantine malware: {fpath}")
 
-    if data["core_integrity"] == "fail":
-        errors.append("Core integrity FAILED — possible file tampering, investigation required")
+    if data.get("webshells"):
+        quarantine = f"{BACKUP_REMOTE_DIR}/{site}/quarantine_malware_{datetime.now().strftime('%Y%m%d')}"
+        ssh_cmd(f"mkdir -p {quarantine}")
+        for fpath in data["webshells"]:
+            fname = os.path.basename(fpath)
+            result = ssh_cmd(f"mv '{fpath}' '{quarantine}/{fname}' 2>/dev/null && echo OK || echo FAIL")
+            if "OK" in result:
+                fixes.append(f"WEBSHELL REMOVED: {fname} → quarantine")
+            else:
+                errors.append(f"CRITICAL: Failed to quarantine webshell: {fpath}")
+
+    if data["core_integrity"] == "fail" and not data.get("injected_core_files"):
+        errors.append("Core integrity issue — investigate manually")
 
     is_critical = site in CRITICAL_SITES
 
